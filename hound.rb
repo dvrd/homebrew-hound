@@ -5,21 +5,21 @@
 class Hound < Formula
   desc "Terminal UI for Solana — manage wallets, track portfolio, and swap tokens"
   homepage "https://github.com/dvrd/hound"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dvrd/hound/releases/download/v1.0.0/hound_darwin_amd64.tar.gz"
-      sha256 "1ea2546458af50071d1592c300a222ed9aa1a83a0f73e445967f04877d62ca93"
+      url "https://github.com/dvrd/hound/releases/download/v1.1.0/hound_darwin_amd64.tar.gz"
+      sha256 "35a154becbe0686096708eadbc0b9b452b352bc83566afab405fa4cb3514c0ee"
 
       define_method(:install) do
         bin.install "hound"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dvrd/hound/releases/download/v1.0.0/hound_darwin_arm64.tar.gz"
-      sha256 "6db821f28179438c5c347fcc0be6ab5a718e79da4f0d991221a9a92c4ec6710d"
+      url "https://github.com/dvrd/hound/releases/download/v1.1.0/hound_darwin_arm64.tar.gz"
+      sha256 "5a820d6dfc2abcddf50e33740d6d3bd45649ea3920e6c77d098744713f519de0"
 
       define_method(:install) do
         bin.install "hound"
@@ -29,15 +29,15 @@ class Hound < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dvrd/hound/releases/download/v1.0.0/hound_linux_amd64.tar.gz"
-      sha256 "2daa35a48086912497500f75fd0c6f9017642a1a81aef14ccede55cfa5996267"
+      url "https://github.com/dvrd/hound/releases/download/v1.1.0/hound_linux_amd64.tar.gz"
+      sha256 "c8fbc91d1e1a5a4005a60836ea38619e004c1f32d533258629583d6125c3095c"
       define_method(:install) do
         bin.install "hound"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dvrd/hound/releases/download/v1.0.0/hound_linux_arm64.tar.gz"
-      sha256 "7f137860f2636577a9cf3ef25b9e20833888ed5a928909091b37a82d6402a647"
+      url "https://github.com/dvrd/hound/releases/download/v1.1.0/hound_linux_arm64.tar.gz"
+      sha256 "d3f2d0ff492a452bc6de7ce48e979965443f12c67cae9d301cec6f96d2820157"
       define_method(:install) do
         bin.install "hound"
       end
